@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DECORE</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Decore - Simulado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 1rem;
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .header p {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+        .form-section {
+            margin-bottom: 1.5rem;
+        }
+        .form-section-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: #374151;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 0.5rem;
+        }
+        .form-field {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+        .form-field label {
+            font-weight: 500;
+            color: #4b5563;
+            flex-basis: 100%;
+        }
+        .form-field input, .form-field select {
+            flex: 1;
+            min-width: 150px;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            transition: all 0.2s;
+            outline: none;
+        }
+        .form-field input:focus, .form-field select:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .form-col {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="container mx-auto p-8 bg-white rounded-xl shadow-lg">
+        <!-- Título do Documento -->
+        <header class="text-center mb-6">
+            <h1 class="text-xl font-bold text-gray-800">ANEXO I - RESOLUÇÃO CFC N.º 1.364/2011</h1>
+            <p class="text-sm text-gray-500">(alterado pela Resolução CFC N.º 1.403/12, aprovada em 27 de julho de 2012)</p>
+            <h2 class="text-2xl font-extrabold mt-4 text-gray-900">DECLARAÇÃO COMPROBATÓRIA DE PERCEPÇÃO DE RENDIMENTOS - DECORE</h2>
+            <p class="text-sm text-gray-600 mt-2">(Resolução CFC n.º 1.364, de 25 de novembro de 2011)</p>
+        </header>
+
+        <!-- Formulário -->
+        <form id="decore-form">
+            <!-- Seção 1: Beneficiário -->
+            <div class="form-section">
+                <h3 class="form-section-title">01. BENEFICIÁRIO</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="beneficiary-name">NOME</label>
+                        <input type="text" id="beneficiary-name" class="w-full" placeholder="Ex: João da Silva">
+                    </div>
+                    <div class="form-col">
+                        <label for="beneficiary-cpf">CPF</label>
+                        <input type="text" id="beneficiary-cpf" class="w-full" placeholder="Ex: 123.456.789-00">
+                    </div>
+                    <div class="form-col">
+                        <label for="beneficiary-ci">C.I.</label>
+                        <input type="text" id="beneficiary-ci" class="w-full" placeholder="Ex: 12.345.678-9">
+                    </div>
+                    <div class="form-col">
+                        <label for="beneficiary-org">ORG. EXP.</label>
+                        <input type="text" id="beneficiary-org" class="w-full" placeholder="Ex: SSP">
+                    </div>
+                    <div class="form-col">
+                        <label for="beneficiary-uf">UF</label>
+                        <input type="text" id="beneficiary-uf" class="w-full" placeholder="Ex: MG">
+                    </div>
+                </div>
+                <div class="form-row mt-4">
+                    <div class="form-col flex-grow">
+                        <label for="beneficiary-address">END</label>
+                        <input type="text" id="beneficiary-address" class="w-full" placeholder="Ex: Rua das Flores, 123">
+                    </div>
+                </div>
+                <div class="form-row mt-4">
+                    <div class="form-col">
+                        <label for="beneficiary-bairro">BAIRRO</label>
+                        <input type="text" id="beneficiary-bairro" class="w-full" placeholder="Ex: Centro">
+                    </div>
+                    <div class="form-col">
+                        <label for="beneficiary-city">CIDADE</label>
+                        <input type="text" id="beneficiary-city" class="w-full" placeholder="Ex: São Paulo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 2: Rendimentos Comprovados -->
+            <div class="form-section">
+                <h3 class="form-section-title">02. RENDIMENTOS COMPROVADOS</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="rendimento-natureza">NATUREZA</label>
+                        <input type="text" id="rendimento-natureza" class="w-full" placeholder="Ex: Prestação de serviços">
+                    </div>
+                    <div class="form-col">
+                        <label for="rendimento-periodo">PERÍODO DE PERCEPÇÃO</label>
+                        <input type="text" id="rendimento-periodo" class="w-full" placeholder="Ex: Jan/2024 a Dez/2024">
+                    </div>
+                </div>
+                <div class="form-row mt-4">
+                    <div class="form-col">
+                        <label for="rendimento-valor">VALOR</label>
+                        <input type="text" id="rendimento-valor" class="w-full" placeholder="Ex: R$ 5.000,00">
+                    </div>
+                    <div class="form-col">
+                        <label for="rendimento-doc">DOCUMENTAÇÃO BASE (ESPECIFICAR)</label>
+                        <input type="text" id="rendimento-doc" class="w-full" placeholder="Ex: Recibos de Pagamento Autônomo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 3: Fonte Pagadora -->
+            <div class="form-section">
+                <h3 class="form-section-title">03. FONTE PAGADORA</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="fonte-pagadora-nome">NOME</label>
+                        <input type="text" id="fonte-pagadora-nome" class="w-full" placeholder="Ex: Empresa Exemplo Ltda.">
+                    </div>
+                    <div class="form-col">
+                        <label for="fonte-pagadora-cpf-cnpj">CPF/CNPJ</label>
+                        <input type="text" id="fonte-pagadora-cpf-cnpj" class="w-full" placeholder="Ex: 00.123.456/0001-78">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 4: Profissional Declarante -->
+            <div class="form-section">
+                <h3 class="form-section-title">04. PROFISSIONAL DECLARANTE</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="declarante-nome">NOME</label>
+                        <input type="text" id="declarante-nome" class="w-full" value="Paulo Barreto Junior" disabled>
+                    </div>
+                    <div class="form-col">
+                        <label for="declarante-categoria">CATEGORIA</label>
+                        <input type="text" id="declarante-categoria" class="w-full" value="Contador(a)" disabled>
+                    </div>
+                </div>
+                <div class="form-row mt-4">
+                    <div class="form-col">
+                        <label for="declarante-org-contabil">ORG. CONTÁBIL</label>
+                        <input type="text" id="declarante-org-contabil" class="w-full" value="CRC/MG" disabled>
+                    </div>
+                    <div class="form-col">
+                        <label for="declarante-reg-crc">REG. CRC</label>
+                        <input type="text" id="declarante-reg-crc" class="w-full" value="MG-078644/O" disabled>
+                    </div>
+                    <div class="form-col">
+                        <label for="declarante-cad-crc">CAD. CRC</label>
+                        <input type="text" id="declarante-cad-crc" class="w-full" value="98765" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 5: Destinatário -->
+            <div class="form-section">
+                <h3 class="form-section-title">05. DESTINATÁRIO</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="destinatario">END</label>
+                        <input type="text" id="destinatario" class="w-full" placeholder="Ex: Av. Principal, 456">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Declaração -->
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <p class="text-sm leading-relaxed text-gray-700">Declaramos, para fins de direito perante o destinatário desta declaração e a quem interessar possa, sob as penas da lei, especialmente das previsões do artigo 299 do Código Penal Brasileiro e, no inciso XIII do Artigo 24 do Regulamento Geral dos Conselhos de Contabilidade - Resolução CFC n.º 1.370/11, que as informações e os rendimentos constituem a expressão da verdade e que possuímos os documentos comprobatórios da presente DECORE.</p>
+            </div>
+            
+        </form>
+    </div>
+    
+    <div class="footer mt-4">
+        <p>
+            Para "exportar" para JPG ou PDF:
+            <br>
+            1. Preencha o formulário.
+            <br>
+            2. Pressione **Ctrl + P** (ou Cmd + P no Mac) para abrir a janela de impressão do seu navegador.
+            <br>
+            3. Na opção "Destino", selecione **"Salvar como PDF"** para gerar um PDF.
+            <br>
+            4. Se quiser um JPG, use o "print screen" (tecla **PrtScn**) ou uma ferramenta de captura de tela.
+        </p>
+    </div>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
